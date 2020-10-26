@@ -1,0 +1,29 @@
+.btn {
+    // display: block;
+    padding: 0.5em 1em;
+    border: 0;
+    margin-top: 30px;
+    border-radius: 20px;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary {
+    @extend .btn;
+    background: #ddd;
+    color: $primary-color;
+
+    &:hover {
+        background: $primary-color;
+        color: $white-color;
+    }
+}
+.btn-secondary {
+    @extend .btn;
+    background: lighten($color: $secondary-color, $amount: 5);
+    color: #333;
+
+    &:hover {
+        background: $secondary-color;
+    }
+}

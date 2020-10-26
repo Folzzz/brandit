@@ -1,0 +1,90 @@
+// nav bar section styles
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: set-bg-color($white-color);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    @include easeOut;
+
+    &.include {
+        transform: translateX(-30vh);
+    }
+    .nav-menu-btn {
+        cursor: pointer;
+        color: #fff;
+        @include easeOut;
+
+        .btn-line {
+            width: 28px;
+            height: 5px;
+            margin-bottom: 5px;
+            background-color: $white-color;
+
+            &:nth-child(3) {
+                background-color: $secondary-color;
+            }
+        }
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+
+        &.close {
+            .btn-line {
+
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translate(5px, -5px);
+                }
+                
+            }
+        }
+    }
+
+    .nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -30vh;
+        width: 30vh;
+        padding: 1rem;
+        background: rgba($color: $secondary-color, $alpha: 0.7);
+        color: $white-color;
+        transform: translate3d(0, -100%, 0);
+        z-index: 5;
+        @include easeOut;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+        .nav-menu-ul {
+            list-style: none;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-end;
+            justify-content: center;
+
+
+            .nav-menu-list {
+                padding: 1rem;
+
+                .nav-menu-link {
+                    color: $white-color;
+                }
+                &:hover {
+                    border-bottom: 1px solid $secondary-color;
+                }
+            }
+        }
+    }
+}
