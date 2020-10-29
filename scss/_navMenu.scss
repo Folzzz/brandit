@@ -57,8 +57,9 @@
         top: 0;
         right: -30vh;
         width: 30vh;
+        height: 80vh;
         padding: 1rem;
-        background: rgba($color: $secondary-color, $alpha: 0.7);
+        background: rgba($color: $secondary-color, $alpha: 0.9);
         color: $white-color;
         transform: translate3d(0, -100%, 0);
         z-index: 5;
@@ -76,7 +77,7 @@
 
 
             .nav-menu-list {
-                padding: 1rem;
+                padding: 1.5rem;
 
                 .nav-menu-link {
                     color: $white-color;

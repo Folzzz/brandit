@@ -12,6 +12,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: calc(0.7rem + 1vw);
 }
 body {
     color: $primary-color;
@@ -21,7 +22,7 @@ body {
 }
 
 main {
-    margin-top: 3rem;
+    margin: 3rem 0;
 
     .feature {
         padding: 2rem;
@@ -33,6 +34,19 @@ a {
     text-decoration: none;
     color: $secondary-color;
     text-transform: uppercase;
+}
+
+// li
+li {
+    list-style: none;
+}
+
+// margin-bottom
+.mb-sm {
+    margin-bottom: 0.75rem;
+}
+.mb {
+    margin-bottom: 1.5rem;
 }
 
 // each feature heading
@@ -166,6 +180,7 @@ a {
             padding: 1rem;
             top: 0;
             left: 0;
+            // transform: translate(-50%, -50%);
             opacity: 0;
             width: 50vw;
             transition: all 0.5s ease-in-out 0.3s;
@@ -232,9 +247,10 @@ a {
     .state-content {
         position: relative;
         width: 100%;
-        height: 200px;
+        height: 300px;
         // padding: 0.5rem 0;
         margin: 0.5rem 0;
+        cursor: pointer;
 
         img {
             // position: relative;
@@ -243,6 +259,15 @@ a {
             object-position: center;
             object-fit: cover;
             overflow: hidden;
+        }
+
+        h2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            color: white;
+            background-color: rgba($color: $primary-color, $alpha: 0.8);
         }
 
         .state-hover {
@@ -264,13 +289,30 @@ a {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 // font: 1.2rem;
-                text-align: center;
+                text-align: left;
+                // overflow-y: auto;
+
+                h3 {
+                    font-size: 2rem;
+                }
+                p {
+                    margin: 0.75rem 0;
+                }
+
+                a {
+                    font-size: 0.75rem;
+                }
             }
         }
 
-        &:hover .state-hover {
-            opacity: 1;
-        }
+        &:hover{
+            h2 {
+                opacity: 0;
+            }
+            .state-hover {
+                opacity: 1;
+            }
+        } 
     }
 
 }
@@ -341,12 +383,245 @@ a {
     background-color: $primary-color;
     color: $white-color;
     padding: 2rem 2rem 0 2rem;
+
+    .footer-brand {
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid $white-color;
+    }
+
+    .footer-links {
+        text-align: center;
+        margin-top: 2.5rem;
+
+        .quick-link-wrapper {
+            text-align: center;
+            .quick-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 0.5rem;
+
+                .footer-nation,
+                .footer-states {
+                    margin: 0.25rem;
+                }
+                
+            }
+            
+        }
+        
+        .contact-link {
+            margin: 0.5rem 0 0.25rem;
+
+            .contact-details {
+                margin-top: 0.5rem;
+            }
+        }
+        .social-link {
+            margin: 0.5rem 0 0.25rem;
+
+            .social-icons {
+                margin-top: 0.5rem;
+
+                .fa {
+                    font-size: 2rem;
+                    padding: 0 0.25rem;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    .web-rights {
+        text-align: center;
+        padding: 1rem 0;
+        // margin: 0.5rem 0 0.25rem;
+
+    }
 }
 
-// icons
-// .fa {
-//     font-size: 2rem;
-// }
 
+
+// About Page about.html
+
+// About hero section
+.about-hero-container {
+    width: 100%;
+    height: 400px;
+
+    .about-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/img-1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    
+        // img {
+        //     width: 100%;
+        //     height: 100%;
+        //     object-fit: cover;
+        //     object-position: center;
+        // }
+
+        .about-hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $white-color;
+            text-align: center;
+
+            h2 {
+                font-weight: 400;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// about feature one
+.about-feat-one {
+
+    .feat-one-content {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// about feature two
+.about-feat-two {
+
+    .feat-two-image {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 0.75rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+        }
+    }
+
+    .feat-two-text {
+        margin-top: 0.75rem;
+    }
+    .feat-two-icon {
+        visibility: hidden;
+    }
+}
+
+// About feature three
+.about-feat-three {
+    .feat-three-image {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 0.75rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+        }
+    }
+
+    .feat-three-text {
+        margin-top: 0.75rem;
+    }
+    .feat-three-icon {
+        visibility: hidden;
+    }
+}
+
+// about mid page
+.about-mid-page {
+    text-align: center;
+    text-transform: uppercase;
+
+    p {
+        font-size: 1.8rem;
+    }
+}
+
+// feature ends
+.feat-end {
+    width: 100%;
+    height: 150px;
+    margin-top: 2rem;
+    // padding-top: 2rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+
+
+// SECTORS PAGE sector.html
+
+// sector hero section
+.sector-hero-container {
+    width: 100%;
+    height: 400px;
+
+    .sector-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/img-6.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .sector-hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $white-color;
+            text-align: center;
+
+            h2 {
+                font-weight: 400;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// segment sections
+
+.segment-content {
+    margin: 1rem 0;
+    padding: 2rem 1rem;
+    @include boxShadow;
+
+    .segment-header {
+        text-align: center;
+
+        .segment-icon {
+
+            .fa {
+                font-size: 4rem;
+                color: $secondary-color;
+            }
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}
 
 @import 'responsive';
