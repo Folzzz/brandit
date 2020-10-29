@@ -6,6 +6,10 @@
 
 // for medium screen
 @include mediaMD {
+    // root
+    * {
+        font-size: 16px;
+    }
 
     // hero section
     .hero-container {
@@ -124,6 +128,92 @@
             img {
                 height: 300px;
             }
+        }
+    }
+
+    // footer section
+    .footer {
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+
+    // About Page media query
+
+    // about feature two
+    .feat-two-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .feat-two-image {
+            width: 50%;
+            margin: 0rem 2rem 0rem 0rem;
+        }
+        .feat-two-text {
+            width: 50%;
+            margin: 0rem 0rem 0rem 2rem;
+        }
+
+        .feat-two-icon {
+            position: absolute;
+            visibility: visible;
+
+            .fa {
+                font-size: 2rem;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .about-feat-three {
+
+        .feat-three-content {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .feat-three-image {
+            width: 50%;
+            margin: 0rem 0rem 0rem 2rem;
+        }
+        .feat-three-text {
+            width: 50%;
+            margin: 0rem 2rem 0rem 0rem;
+        }
+
+        .feat-three-icon {
+            position: absolute;
+            visibility: visible;
+
+            .fa {
+                font-size: 2rem;
+                color: $secondary-color;
+            }
+        }
+    }
+
+
+    // SECTOR PAGE media query
+    // segments section
+    
+    .segments-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .segment-left {
+            margin: 1rem 1.5rem 1rem 0rem;
+        }
+        .segment-right {
+            margin: 1rem 0rem 1rem 1.5rem;
         }
     }
 }
